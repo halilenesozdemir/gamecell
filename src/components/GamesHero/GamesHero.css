@@ -1,0 +1,25 @@
+.bg-image {
+  background-image: url("https://gameplus.com.tr/static/media/foot-banner.46c1fc4c.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25rem;
+}
+
+.search {
+  position: relative;
+  width: 100%;
+}
+.search-icon {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+.search input {
+  border: none;
+  background-color: #fff;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}/*# sourceMappingURL=GamesHero.css.map */

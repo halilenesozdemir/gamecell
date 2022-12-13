@@ -1,6 +1,6 @@
 import React from 'react';
 import BtSliderImg from '../../assets/bt-slider.png';
-import './BottomSlider.scss';
+import './BottomSlider.css';
 
 function BottomSlider() {
   return (

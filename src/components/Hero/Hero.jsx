@@ -2,7 +2,7 @@ import React from 'react';
 import './Hero.scss';
 import heroSrc from '../../assets/hero.png';
 
-function Hero() {
+function Hero({ datas }) {
   return (
     <>
       <div id='carouselExampleIndicators' className='carousel slide' data-bs-ride='true'>
@@ -26,7 +26,11 @@ function Hero() {
             aria-label='Slide 3'></button>
         </div>
         <div className='carousel-inner'>
-          <div className='carousel-item active'>
+          {datas.map((data) => {
+            return <Card data={data} />;
+          })}
+
+          {/* <div className='carousel-item'>
             <img src={heroSrc} className='d-block w-100' alt='' />
             <div className='carousel-contents'>
               <div className='carousel-content col-7 flex-column fs-6'>
@@ -61,7 +65,7 @@ function Hero() {
                 <button className='btn px-4 py-2 bg-danger'>REGISTER</button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <button
           className='carousel-control-prev'
@@ -85,3 +89,18 @@ function Hero() {
 }
 
 export default Hero;
+
+function Card({ data }) {
+  return (
+    <div className='carousel-item active'>
+      <img src={heroSrc} className='d-block w-100' alt='' />
+      <div className='carousel-contents'>
+        <div className='carousel-content col-7 flex-column fs-6'>
+          {data.title}
+          <p className=''>{data.content}</p>
+          <button className='btn px-4 py-2 bg-danger'>REGISTER</button>
+        </div>
+      </div>
+    </div>
+  );
+}

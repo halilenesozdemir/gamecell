@@ -8,6 +8,7 @@ import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero';
 import Pricing from '../components/Pricing/Pricing';
 import Screens from '../components/Screens/Screens';
+import datas from '../mock/CardMock';
 
 import React from 'react';
 
@@ -15,7 +16,7 @@ function Home() {
   return (
     <>
       <Header />
-      <Hero />
+      <Hero datas={datas} />
       <Features />
       <Screens />
       <Games />
