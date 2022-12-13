@@ -1,5 +1,5 @@
 import React from 'react';
-import './RegisterHeader.css';
+import './RegisterHeader.scss';
 
 function RegisterHeader() {
   return (
@@ -51,16 +51,3 @@ function RegisterHeader() {
 }
 
 export default RegisterHeader;
-
-/* 
-
-            <img
-              className='logo-img'
-              src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/05D02D0F-C436-4842-9A6E-56C4D0D077D8.png'
-              alt=''
-            />
-            <img
-              src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/10D39C65-7309-4B26-A9CD-F37EC7EA5FE2.svg'
-              alt=''
-            />
-*/

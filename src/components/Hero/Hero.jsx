@@ -72,7 +72,12 @@ function Hero({ datas }) {
           type='button'
           data-bs-target='#carouselExampleIndicators'
           data-bs-slide='prev'>
-          <span className='carousel-control-prev-icon' aria-hidden='true'></span>
+          <span>
+            <img
+              src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/1B87D60A-E56B-4366-95C8-E6D02E1B2CBC.svg'
+              alt=''
+            />
+          </span>
           <span className='visually-hidden'>Previous</span>
         </button>
         <button
@@ -80,7 +85,12 @@ function Hero({ datas }) {
           type='button'
           data-bs-target='#carouselExampleIndicators'
           data-bs-slide='next'>
-          <span className='carousel-control-next-icon' aria-hidden='true'></span>
+          <span>
+            <img
+              src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/292765E5-EC6B-4C0A-B916-4A7242FEBA2E.svg'
+              alt=''
+            />
+          </span>
           <span className='visually-hidden'>Next</span>
         </button>
       </div>
@@ -98,7 +108,6 @@ function Card({ data }) {
         <div className='carousel-content col-7 flex-column fs-6'>
           {data.title}
           <p className=''>{data.content}</p>
-          <button className='btn px-4 py-2 bg-danger'>REGISTER</button>
         </div>
       </div>
     </div>

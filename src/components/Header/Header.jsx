@@ -1,23 +1,20 @@
 import React from 'react';
-import './Header.css';
+import { Link } from 'react-router-dom';
+import './Header.scss';
 
 function Header() {
   return (
     <>
       <nav className='navbar navbar-expand-lg bg-white py-3 '>
-        <div className='container px-lg-4 px-2 ms-2 '>
-          <a className='navbar-brand' href='#'>
+        <div className='container px-lg-5 px-2 ms-2 '>
+          <Link className='navbar-brand ms-lg-3' to='/'>
             <img
               className='logo-img'
               src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/05D02D0F-C436-4842-9A6E-56C4D0D077D8.png'
               alt=''
             />
-          </a>
-          <button
-            className='navbar-toggler'
-            type='button'
-            data-bs-toggle='collapse'
-            data-bs-target='#navbarNavAltMarkup'>
+          </Link>
+          <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#gameplusNavbar'>
             <span>
               <img
                 src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/10D39C65-7309-4B26-A9CD-F37EC7EA5FE2.svg'
@@ -25,23 +22,23 @@ function Header() {
               />
             </span>
           </button>
-          <div className='collapse navbar-collapse ' id='navbarNavAltMarkup'>
-            <div className='navbar-nav ms-auto'>
-              <a className='nav-item nav-link ' href='#'>
+          <div className='collapse navbar-collapse' id='gameplusNavbar'>
+            <div className='navbar-nav ms-auto d-flex flex-flex-sm-column justify-content-center align-items-center '>
+              <Link className='nav-item nav-link text-black ' to='/games'>
                 Games
-              </a>
-              <a className='nav-item nav-link' href='#'>
+              </Link>
+              <Link className='nav-item nav-link text-black' to='#'>
                 Membership
-              </a>
-              <a className='nav-item nav-link' href='#'>
+              </Link>
+              <Link className='nav-item nav-link text-black' to='#'>
                 Download
-              </a>
-              <a className='nav-item nav-link ' href='#' tabIndex='-1' aria-disabled='true'>
+              </Link>
+              <Link className='nav-item nav-link text-black ' to='#' tabIndex='-1' aria-disabled='true'>
                 Blog
-              </a>
-              <a className='nav-item nav-link ' href='#' tabIndex='-1' aria-disabled='true'>
+              </Link>
+              <Link className='nav-item nav-link text-black ' to='#' tabIndex='-1' aria-disabled='true'>
                 Support
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -51,16 +48,3 @@ function Header() {
 }
 
 export default Header;
-
-/* 
-
-            <img
-              className='logo-img'
-              src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/05D02D0F-C436-4842-9A6E-56C4D0D077D8.png'
-              alt=''
-            />
-            <img
-              src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/10D39C65-7309-4B26-A9CD-F37EC7EA5FE2.svg'
-              alt=''
-            />
-*/

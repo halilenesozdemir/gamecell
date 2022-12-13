@@ -1,5 +1,5 @@
 import React from 'react';
-import './GamesHero.css';
+import './GamesHero.scss';
 
 function GamesHero() {
   return (
