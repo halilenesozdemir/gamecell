@@ -1,12 +1,11 @@
 import React from 'react';
 import './Header.css';
-import Button from '../Button/Button';
 
 function Header() {
   return (
     <>
-      <div className='container'>
-        <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+      <nav className='navbar navbar-expand-lg bg-white py-3 '>
+        <div className='container px-lg-4 px-2 ms-2 '>
           <a className='navbar-brand' href='#'>
             <img
               className='logo-img'
@@ -14,16 +13,20 @@ function Header() {
               alt=''
             />
           </a>
-          <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup'>
-            <span className='navbar-toggler-icon'>
+          <button
+            className='navbar-toggler'
+            type='button'
+            data-bs-toggle='collapse'
+            data-bs-target='#navbarNavAltMarkup'>
+            <span>
               <img
                 src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/10D39C65-7309-4B26-A9CD-F37EC7EA5FE2.svg'
                 alt=''
               />
             </span>
           </button>
-          <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
-            <div className='navbar-nav'>
+          <div className='collapse navbar-collapse ' id='navbarNavAltMarkup'>
+            <div className='navbar-nav ms-auto'>
               <a className='nav-item nav-link ' href='#'>
                 Games
               </a>
@@ -39,11 +42,10 @@ function Header() {
               <a className='nav-item nav-link ' href='#' tabIndex='-1' aria-disabled='true'>
                 Support
               </a>
-              <Button>Success Button</Button>
             </div>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </>
   );
 }

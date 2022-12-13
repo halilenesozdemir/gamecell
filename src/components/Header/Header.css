@@ -2,6 +2,20 @@
   width: 200px;
 }
 
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  border: none;
+}
+
 .navbar-toggler {
-  padding: 0;
+  border: none;
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
 }/*# sourceMappingURL=Header.css.map */
