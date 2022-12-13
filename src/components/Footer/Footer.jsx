@@ -4,9 +4,9 @@ function Footer() {
   return (
     <>
       <footer>
-        <div class='row text-center'>
-          <div class='col-sm'>
-            <ul class='list-unstyled links'>
+        <div className='row text-center'>
+          <div className='col-sm'>
+            <ul className='list-unstyled links'>
               <li>
                 <a href='#'>Buyer</a>
               </li>
@@ -15,8 +15,8 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div class='col-sm'>
-            <ul class='list-unstyled links'>
+          <div className='col-sm'>
+            <ul className='list-unstyled links'>
               <li>
                 <a href='#'>About us</a>
               </li>
@@ -28,8 +28,8 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div class='col-sm'>
-            <ul class='list-unstyled links'>
+          <div className='col-sm'>
+            <ul className='list-unstyled links'>
               <li>
                 <a href='#'>Terms &amp; Conditions</a>
               </li>
@@ -38,31 +38,31 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div class='col-md-3'>
-            <ul class='list-unstyled social'>
+          <div className='col-md-3'>
+            <ul className='list-unstyled social'>
               <li>
                 <a href='#'>
-                  <span class='icon-facebook'></span>
+                  <span className='icon-facebook'></span>
                 </a>
               </li>
               <li>
                 <a href='#'>
-                  <span class='icon-twitter'></span>
+                  <span className='icon-twitter'></span>
                 </a>
               </li>
               <li>
                 <a href='#'>
-                  <span class='icon-linkedin'></span>
+                  <span className='icon-linkedin'></span>
                 </a>
               </li>
               <li>
                 <a href='#'>
-                  <span class='icon-medium'></span>
+                  <span className='icon-medium'></span>
                 </a>
               </li>
               <li>
                 <a href='#'>
-                  <span class='icon-paper-plane'></span>
+                  <span className='icon-paper-plane'></span>
                 </a>
               </li>
             </ul>
