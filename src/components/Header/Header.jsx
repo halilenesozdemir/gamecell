@@ -5,7 +5,7 @@ import './Header.scss';
 function Header() {
   return (
     <>
-      <nav className='navbar navbar-expand-lg bg-white py-3 '>
+      <nav className='navbar navbar-expand-lg bg-white py-3  '>
         <div className='container px-lg-5 px-2 ms-2 '>
           <Link className='navbar-brand ms-lg-3' to='/'>
             <img

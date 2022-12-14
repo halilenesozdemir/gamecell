@@ -1,6 +1,4 @@
 import React from 'react';
-import { gameImage } from '../../mock/GameMock';
-
 import './Games.scss';
 
 function Games({ gameImage }) {
@@ -11,9 +9,6 @@ function Games({ gameImage }) {
         <div className='row'>
           <div className='col-6 col-sm-3 col-lg-2 mb-3'>
             {gameImage.map((img, index) => {
-              {
-                console.log(gameImage);
-              }
               return <img key={index} src={img} className='game-img img-fluid' alt='...' />;
             })}
           </div>

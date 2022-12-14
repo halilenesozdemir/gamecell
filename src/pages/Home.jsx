@@ -9,7 +9,7 @@ import Hero from '../components/Hero/Hero';
 import Pricing from '../components/Pricing/Pricing';
 import Screens from '../components/Screens/Screens';
 import datas from '../mock/CardMock';
-import { gameImage } from '../mock/GameMock';
+import gameImage from '../mock/GameMock';
 
 import React from 'react';
 
@@ -20,7 +20,7 @@ function Home() {
       <Hero datas={datas} />
       <Features />
       <Screens />
-      <Games gameImage={gameImage} />
+      {/* <Games gameImage={gameImage} /> */}
       <Pricing />
       <BottomSlider />
       <Banner />
