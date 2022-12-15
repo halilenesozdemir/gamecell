@@ -18,7 +18,7 @@ function Games() {
     <>
       <Header />
       <GamesHero />
-      <FilterList />
+      {/* <FilterList /> */}
       <GamesMain games={games} />
     </>
   );

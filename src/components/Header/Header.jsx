@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
 import './Header.scss';
 
 function Header() {
@@ -23,7 +24,7 @@ function Header() {
             </span>
           </button>
           <div className='collapse navbar-collapse' id='gameplusNavbar'>
-            <div className='navbar-nav ms-auto d-flex flex-flex-sm-column justify-content-center align-items-center '>
+            <div className='navbar-nav ms-auto d-flex flex-flex-sm-column justify-content-center align-items-center  '>
               <Link className='nav-item nav-link text-black ' to='/games'>
                 Games
               </Link>
@@ -39,6 +40,7 @@ function Header() {
               <Link className='nav-item nav-link text-black ' to='#' tabIndex='-1' aria-disabled='true'>
                 Support
               </Link>
+              <Button width='185px' height='40px' children={"LET'S PLAY"} />
             </div>
           </div>
         </div>
