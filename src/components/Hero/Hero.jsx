@@ -5,7 +5,7 @@ import heroSrc from '../../assets/hero.png';
 function Hero({ datas }) {
   return (
     <>
-      <div id='carouselExampleIndicators' className='carousel slide' data-bs-ride='true'>
+      <div id='carouselExampleIndicators' className='carousel slide ' data-bs-ride='true'>
         <div class='carousel-indicators'>
           <button
             type='button'
@@ -29,43 +29,6 @@ function Hero({ datas }) {
           {datas.map((data) => {
             return <Card data={data} />;
           })}
-
-          {/* <div className='carousel-item'>
-            <img src={heroSrc} className='d-block w-100' alt='' />
-            <div className='carousel-contents'>
-              <div className='carousel-content col-7 flex-column fs-6'>
-                Gameplus ile ayrıcalıklı GeForce Now deneyimine hoşgeldin!
-                <p className=''>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor augue vel porta ullamcorper.
-                </p>
-                <button className='btn px-4 py-2 bg-danger'>REGISTER</button>
-              </div>
-            </div>
-          </div>
-          <div className='carousel-item'>
-            <img src={heroSrc} className='d-block w-100' alt='' />
-            <div className='carousel-contents'>
-              <div className='carousel-content col-4'>
-                Gameplus ile ayrıcalıklı GeForce Now deneyimine hoşgeldin!
-                <p className=''>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor augue vel porta ullamcorper.
-                </p>
-                <button className='btn px-4 py-2 bg-danger'>REGISTER</button>
-              </div>
-            </div>
-          </div>
-          <div className='carousel-item'>
-            <img src={heroSrc} className='d-block w-100' alt='' />
-            <div className='carousel-contents'>
-              <div className='carousel-content col-4'>
-                Gameplus ile ayrıcalıklı GeForce Now deneyimine hoşgeldin!
-                <p className=''>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor augue vel porta ullamcorper.
-                </p>
-                <button className='btn px-4 py-2 bg-danger'>REGISTER</button>
-              </div>
-            </div>
-          </div> */}
         </div>
         <button
           className='carousel-control-prev'
@@ -102,12 +65,13 @@ export default Hero;
 
 function Card({ data }) {
   return (
-    <div className='carousel-item active'>
-      <img src={heroSrc} className='d-block w-100' alt='' />
+    <div className='carousel-item active d-flex flex-column flex-flex-lg-row  '>
+      <img src={heroSrc} className='h-75 ' alt='' />
       <div className='carousel-contents'>
-        <div className='carousel-content col-7 flex-column fs-6'>
+        <div className='carousel-content col-7 '>
           {data.title}
-          <p className=''>{data.content}</p>
+          <p>{data.content}</p>
+          {data.button}
         </div>
       </div>
     </div>

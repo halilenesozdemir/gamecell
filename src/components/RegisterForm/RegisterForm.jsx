@@ -5,14 +5,6 @@ import './RegisterForm.scss';
 import registerImg from '../../assets/register.png';
 
 function RegisterForm() {
-  /*   const onFocus = (e) => {
-    e.target.type = 'date';
-  };
-
-  const onBlur = (e) => {
-    e.target.type = 'text';
-    e.target.placeholder = 'Date of Birth';
-  }; */
   return (
     <>
       <div className='container-fluid'>

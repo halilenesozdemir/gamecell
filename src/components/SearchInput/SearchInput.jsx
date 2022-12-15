@@ -11,6 +11,7 @@ function SearchInput() {
   const searchGame = (e) => {
     const value = e.target.value;
     dispatch(setTextFilter(value));
+    console.log(value);
   };
   return (
     <>
@@ -19,7 +20,7 @@ function SearchInput() {
           type='text'
           className='py-2'
           value={inputValue || ''}
-          onChange={(e) => searchGame(e)}
+          onChange={searchGame}
           placeholder='Search...'
           alt=''
         />

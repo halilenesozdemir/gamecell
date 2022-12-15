@@ -6,8 +6,8 @@ import './Header.scss';
 function Header() {
   return (
     <>
-      <nav className='navbar navbar-expand-lg bg-white py-3  '>
-        <div className='container px-lg-5 px-2 ms-2 '>
+      <nav className='navbar navbar-expand-md bg-white py-3  '>
+        <div className='container-md px-lg-3 px-2 ms-2 '>
           <Link className='navbar-brand ms-lg-3' to='/'>
             <img
               className='logo-img'
@@ -24,7 +24,7 @@ function Header() {
             </span>
           </button>
           <div className='collapse navbar-collapse' id='gameplusNavbar'>
-            <div className='navbar-nav ms-auto d-flex flex-flex-sm-column justify-content-center align-items-center  '>
+            <div className='navbar-nav ms-auto d-flex flex-flex-sm-column justify-content-center align-items-center gap-3  '>
               <Link className='nav-item nav-link text-black ' to='/games'>
                 Games
               </Link>
@@ -40,7 +40,7 @@ function Header() {
               <Link className='nav-item nav-link text-black ' to='#' tabIndex='-1' aria-disabled='true'>
                 Support
               </Link>
-              <Button width='185px' height='40px' children={"LET'S PLAY"} />
+              <Button width='185' height='40px' children={"LET'S PLAY"} />
             </div>
           </div>
         </div>

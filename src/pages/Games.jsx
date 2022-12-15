@@ -8,7 +8,6 @@ import { gamesAction } from '../reduxStore/games';
 
 function Games() {
   const dispatch = useDispatch();
-  const { games } = useSelector((state) => state.gameReducer);
 
   useEffect(() => {
     dispatch(gamesAction());
@@ -18,8 +17,14 @@ function Games() {
     <>
       <Header />
       <GamesHero />
-      {/* <FilterList /> */}
-      <GamesMain games={games} />
+      <div className='row'>
+        <div className='col-4'>
+          <FilterList />
+        </div>
+        <div className='col-8'>
+          <GamesMain />
+        </div>
+      </div>
     </>
   );
 }

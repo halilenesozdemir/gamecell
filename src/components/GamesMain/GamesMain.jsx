@@ -3,16 +3,24 @@ import { useSelector } from 'react-redux';
 import { getFilteredTitles } from '../../reduxStore/selectors/games';
 import polygon from '../../assets/polygon.svg';
 import './GamesMain.scss';
-import { first } from 'lodash';
 
-function GamesMain({ games }) {
-  // const games = useSelector(getFilteredTitles);
+function GamesMain() {
+  const title = useSelector((state) => state.filters.title);
+  const genreFilter = useSelector((state) => state.filters.genre);
+
+  const { games } = useSelector((state) => state.gameReducer);
+
+  const filteredGames = games.filter((game) => {
+    const isGenreOK = genreFilter.length === 0 ? true : game.genres.some((genre) => genreFilter.includes(genre));
+    const isTitleOK = game.title.toLowerCase().includes(title.toLowerCase());
+    return isGenreOK && isTitleOK;
+  });
+
   let firstLetters = [];
 
-  games.map((game) => {
+  filteredGames.map((game) => {
     firstLetters.push(game.title[0]);
   });
-  console.log(firstLetters);
   let chars = [...new Set(firstLetters.sort())];
   console.log(chars);
 
@@ -26,8 +34,8 @@ function GamesMain({ games }) {
             <span className='char'>{char}</span>
           </div>
           <div className='row'>
-            {games &&
-              games.map((game, index) => {
+            {filteredGames &&
+              filteredGames.map((game, index) => {
                 if (game.title[0] === char) {
                   return (
                     <div key={index}>
@@ -36,7 +44,6 @@ function GamesMain({ games }) {
                   );
                 }
               })}
-            )
           </div>
         </div>
       ))}
