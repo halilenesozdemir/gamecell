@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { sortGenre } from '../../reduxStore/sortGenre';
@@ -69,3 +69,4 @@ function SortFilterGame() {
 }
 
 export default SortFilterGame;
+ */

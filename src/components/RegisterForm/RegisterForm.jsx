@@ -27,7 +27,7 @@ function RegisterForm() {
                 dateOfBirth: '',
                 password: '',
                 agree1: '',
-                agree2: '',
+                agree2: ''
               }}
               validationSchema={Yup.object({
                 name: Yup.string().required('İsim boş bırakılamaz.'),
@@ -39,7 +39,7 @@ function RegisterForm() {
                   .required('Required'),
                 password: Yup.string().min(4, 'Too short').max(50, 'Too Long!').required('Required'),
                 agree1: Yup.boolean().required('Koşulları kabul etmelisin'),
-                agree2: Yup.boolean().required('Koşulları kabul etmelisin'),
+                agree2: Yup.boolean().required('Koşulları kabul etmelisin')
               })}
               onSubmit={(values, { resetForm, setSubmitting }) => {
                 console.log(values);

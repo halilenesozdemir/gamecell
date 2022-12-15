@@ -1,16 +1,15 @@
-import sortGenreReducer from './sortGenre';
-import isSortReducer from './isSort';
-import isSearchReducer from './isSearch';
-import searchGameReducer from './searchGame';
-import { combineReducers, createStore } from 'redux';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import thunk from 'redux-thunk';
+import filtersReducer from './filter';
+import gameReducer from './games';
+
+let initialState = {};
 
 const rootReducer = combineReducers({
-  sortGenre: sortGenreReducer,
-  isSort: isSortReducer,
-  searchGame: searchGameReducer,
-  isSearch: isSearchReducer,
+  filters: filtersReducer,
+  gameReducer
 });
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, initialState, applyMiddleware(thunk));
 
 export default store;

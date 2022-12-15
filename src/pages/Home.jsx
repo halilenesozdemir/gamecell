@@ -20,7 +20,7 @@ function Home() {
       <Hero datas={datas} />
       <Features />
       <Screens />
-      {/* <Games gameImage={gameImage} /> */}
+      <Games gameImage={gameImage} />
       <Pricing />
       <BottomSlider />
       <Banner />

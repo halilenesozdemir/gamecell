@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+/* 
 const ButtonComponent = styled.button`
   width: 185px;
   height: 40px;
@@ -14,18 +14,20 @@ const ButtonComponent = styled.button`
   letter-spacing: 0.57px;
   text-align: center;
   color: ;}
-`;
+`; */
 
-function Button({ type, variant, className, id, onClick, size, children }) {
+function Button({ type, className, id, onClick, children }) {
   return (
-    <ButtonComponent
+    <button
+      /*       style={{
+        backgroundColor: 'red',
+      }} */
       type={type ? type : 'button'}
-      variant={variant}
-      className={className ? `btn-component ${className}` : 'btn-component'}
+      className={`bg-success text-danger ${className} `}
       id={id}
       onClick={onClick}>
       {children}
-    </ButtonComponent>
+    </button>
   );
 }
 
