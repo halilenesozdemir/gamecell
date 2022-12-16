@@ -10,18 +10,20 @@ import Pricing from '../components/Pricing/Pricing';
 import Screens from '../components/Screens/Screens';
 import datas from '../mock/CardMock';
 import gameImage from '../mock/GameMock';
+import { gameImageDesktop } from '../mock/GameMock';
 
 import React from 'react';
+import pricingMock from '../mock/PricingMock';
+import bottomData from '../mock/BottomSliderMock';
 
 function Home() {
   return (
     <>
       <Header />
       <Hero datas={datas} />
-
-      <Games gameImage={gameImage} />
-      <Pricing />
-      <BottomSlider />
+      <Games gameImage={gameImage} gameImageDesktop={gameImageDesktop} />
+      <Pricing pricingMock={pricingMock} />
+      <BottomSlider bottomData={bottomData} />
       <Banner />
       <Footer />
     </>

@@ -35,7 +35,7 @@
 @media only screen and (max-width: 576px) {
   .carousel {
     &-img {
-      height: 30vh;
+      height: 35vh;
       object-fit: cover;
     }
     &-contents {
@@ -46,4 +46,8 @@
       }
     }
   }
+}
+
+.carousel-indicators .active {
+  color: green !important;
 }

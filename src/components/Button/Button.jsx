@@ -7,7 +7,7 @@ function Button({ className, width, height, id, onClick, children }) {
         width,
         height
       }}
-      className={`text-white ${className} `}
+      className={`text-white border ${className} `}
       id={id}
       onClick={onClick}>
       {children}

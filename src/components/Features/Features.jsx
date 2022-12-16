@@ -4,7 +4,7 @@ import './Features.scss';
 function Features() {
   return (
     <>
-      <div className='container-fluid bg-danger p-0   '>
+      <div className='container-fluid features-bg p-0   '>
         <div className='py-2 py-md-3 py-lg-5 container-md mx-auto features-main  '>
           <div className='row row-cols-1 row-cols-lg-2 py-md-0  justify-content-center align-align-items-sm-center  px-2 '>
             <div className='d-flex flex-column align-items-center justify-content-center text-white '>

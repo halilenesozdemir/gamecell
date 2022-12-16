@@ -1,4 +1,4 @@
-export const getAllGamesGenres = (state) => {
+/* export const getAllGamesGenres = (state) => {
   const x = state.gameReducer.games.map((game) => game.genres);
   const y = [...new Set(x.flat(1))];
   let filteredY = y.filter(function (game) {
@@ -6,9 +6,9 @@ export const getAllGamesGenres = (state) => {
   });
   filteredY.sort();
   return filteredY;
-};
+}; */
 
-export const getFilteredTitles = (state) => {
+/* export const getFilteredTitles = (state) => {
   const { gameReducer, filters } = state;
 
   return gameReducer.games
@@ -31,3 +31,4 @@ export const getFilteredTitles = (state) => {
       return textA < textB ? -1 : textA > textB ? 1 : 0;
     });
 };
+ */
