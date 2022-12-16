@@ -11145,3 +11145,19 @@ fieldset:disabled .btn {
   padding: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: GreycliffCF;
+  src: local(GreycliffCF-Regular), url(/public/fonts/Fontspring-DEMO-greycliffcf-regular.otf) format("otf"), url(/path/to/GreycliffCF-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: GreycliffCF;
+  src: local(GreycliffCF-DemiBold), url(/path/to/GreycliffCF-DemiBold.woff2) format("woff2"), url(/path/to/GreycliffCF-DemiBold.otf) format("otf"), url(/path/to/GreycliffCF-DemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+}

@@ -4,14 +4,14 @@ import './Features.scss';
 function Features() {
   return (
     <>
-      <div className='container-fluid '>
-        <div className='bg-black '>
-          <div className='row row-cols-1 row-cols-md-2 align-items-center justify-content-center align-items-md-center g-5 py-3 px-2 '>
-            <div className='d-flex flex-column align-items-center justify-content-center text-white'>
+      <div className='container-fluid bg-danger p-0   '>
+        <div className='py-2 py-md-3 py-lg-5 container-md mx-auto features-main  '>
+          <div className='row row-cols-1 row-cols-lg-2 py-md-0  justify-content-center align-align-items-sm-center  px-2 '>
+            <div className='d-flex flex-column align-items-center justify-content-center text-white '>
               <h3 className='fw-bold '>Features</h3>
               <p className='text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div className='row row-cols-1 row-cols-sm-2 g-4'>
+            <div className='row row-cols-1 row-cols-sm-2 g-3 py-2 mb-2  '>
               <div className='d-flex'>
                 <div className='d-flex align-items-center justify-content-center flex-row gap-2'>
                   <img

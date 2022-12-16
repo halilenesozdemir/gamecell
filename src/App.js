@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Games from './pages/Games';
 import Home from './pages/Home';
 import Register from './pages/Register';
+import './App.scss';
 
 function App() {
   return (

@@ -11,6 +11,15 @@
     }
   }
 
+  &-control-prev {
+    bottom: 50%;
+    width: 12%;
+  }
+  &-control-next {
+    bottom: 50%;
+    width: 12%;
+  }
+
   &-contents {
     .carousel-content {
       position: absolute;
@@ -23,7 +32,7 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
   .carousel {
     &-img {
       height: 30vh;
@@ -37,8 +46,4 @@
       }
     }
   }
-}
-
-.mobile-img {
-  width: 568px;
 }

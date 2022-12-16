@@ -18,8 +18,7 @@ function Home() {
     <>
       <Header />
       <Hero datas={datas} />
-      <Features />
-      <Screens />
+
       <Games gameImage={gameImage} />
       <Pricing />
       <BottomSlider />

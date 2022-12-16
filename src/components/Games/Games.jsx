@@ -15,51 +15,6 @@ function Games({ gameImage }) {
             );
           })}
         </div>
-        {/* <div className='row'>
-          <div className='col-6 col-sm-3 col-lg-2'>
-            <img
-              src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/E88FD84E-22D5-438A-B8C6-775B824E55E7.png'
-              className='game-img img-fluid d-none d-md-block'
-              alt='...'
-            />
-          </div>
-          <div className='col-6 col-lg-2'>
-            <img
-              src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/E88FD84E-22D5-438A-B8C6-775B824E55E7.png'
-              className='game-img img-fluid d-none d-md-block'
-              alt='...'
-            />
-          </div>
-
-          <div className='col-6 col-lg-2'>
-            <img
-              src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/E88FD84E-22D5-438A-B8C6-775B824E55E7.png'
-              className='game-img img-fluid d-none d-md-block'
-              alt='...'
-            />
-          </div>
-          <div className='col-6 col-lg-2'>
-            <img
-              src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/E88FD84E-22D5-438A-B8C6-775B824E55E7.png'
-              className='game-img img-fluid d-none d-md-block'
-              alt='...'
-            />
-          </div>
-
-          <div className='col-6 col-lg-2'>
-            <img
-              src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/E88FD84E-22D5-438A-B8C6-775B824E55E7.png'
-              className='game-img img-fluid d-none d-md-block'
-              alt='...'
-            />
-          </div>
-          <div className='col-6 col-lg-2'>
-            <img
-              src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/E88FD84E-22D5-438A-B8C6-775B824E55E7.png'
-              className='game-img img-fluid d-none d-md-block'
-              alt='...'
-            />
-          </div> */}
       </div>
     </>
   );
