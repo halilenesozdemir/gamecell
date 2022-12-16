@@ -1,17 +1,18 @@
 import React from 'react';
 import './Hero.scss';
 import heroSrc from '../../assets/hero.png';
+import heroMobile from '../../assets/hero-mobile.png';
 
 function Hero({ datas }) {
   return (
     <>
       <div id='carouselExampleIndicators' className='carousel slide ' data-bs-ride='true'>
-        <div class='carousel-indicators'>
+        <div className='carousel-indicators'>
           <button
             type='button'
             data-bs-target='#carouselExampleIndicators'
             data-bs-slide-to='0'
-            class='active'
+            className='active h-50'
             aria-current='true'
             aria-label='Slide 1'></button>
           <button
@@ -31,7 +32,7 @@ function Hero({ datas }) {
           })}
         </div>
         <button
-          className='carousel-control-prev'
+          className='carousel-control-prev d-none d-md-block'
           type='button'
           data-bs-target='#carouselExampleIndicators'
           data-bs-slide='prev'>
@@ -44,7 +45,7 @@ function Hero({ datas }) {
           <span className='visually-hidden'>Previous</span>
         </button>
         <button
-          className='carousel-control-next'
+          className='carousel-control-next d-none d-md-block'
           type='button'
           data-bs-target='#carouselExampleIndicators'
           data-bs-slide='next'>
@@ -65,13 +66,18 @@ export default Hero;
 
 function Card({ data }) {
   return (
-    <div className='carousel-item active d-flex flex-column flex-flex-lg-row  '>
-      <img src={heroSrc} className='h-75 ' alt='' />
-      <div className='carousel-contents'>
-        <div className='carousel-content col-7 '>
-          {data.title}
-          <p>{data.content}</p>
-          {data.button}
+    <div className='carousel-item active  '>
+      <div className='d-flex flex-column '>
+        <picture className='carousel-img w-100' alt=''>
+          <source media='(max-width: 576px )' srcset={heroMobile} />
+          <img src={heroSrc} alt='' />
+        </picture>
+        <div className='carousel-contents '>
+          <div className='carousel-content col-lg-5 col-md-8 mx-md-auto  d-flex flex-column gap-2 px-3  '>
+            <h1 className='h2 '>{data.title}</h1>
+            <p className='h6 '>{data.content}</p>
+            {data.button}
+          </div>
         </div>
       </div>
     </div>
