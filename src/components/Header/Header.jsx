@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import './Header.scss';
+import { useLocation } from 'react-router-dom';
 
 function Header() {
+  let location = useLocation();
+  console.log(location.pathname);
   return (
     <>
       <nav className='navbar navbar-expand-md bg-white py-3  '>
@@ -40,7 +43,11 @@ function Header() {
               <Link className='nav-item nav-link text-black fw-semibold' to='#' tabIndex='-1' aria-disabled='true'>
                 Support
               </Link>
-              <Button width='185px' height='40px' children={"LET'S PLAY"} />
+              {location.pathname.match('/register') ? null : (
+                <Link to='/register'>
+                  <Button width='185px' height='40px' children={"LET'S PLAY"} />
+                </Link>
+              )}
             </div>
           </div>
         </div>

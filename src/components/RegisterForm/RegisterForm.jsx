@@ -9,7 +9,7 @@ function RegisterForm() {
     <>
       <div className='container-fluid'>
         <div className='row d-flex flex-col justify-content-center align-items-center bg-black'>
-          <div className='col col-lg-5 col-sm-8 d-flex flex-column align-items-center justify-content-center'>
+          <div className='col col-sm-10 col-lg-5  d-flex flex-column align-items-center justify-content-center'>
             <Formik
               initialValues={{
                 name: '',
@@ -42,8 +42,8 @@ function RegisterForm() {
               }}>
               {({ values, errors, handleChange, handleSubmit, handleReset, dirty, isSubmitting, touched }) => (
                 <form onSubmit={handleSubmit}>
-                  <h1 className='text-center text-white mt-3 '>Register to play with Game+ Lorem Ipsum</h1>
-                  <div className='container bg-black py-3 px-3 '>
+                  <h2 className='text-center text-white mt-3 p-2 h2'>Register to play with Game+ Lorem Ipsum</h2>
+                  <div className='container bg-black py-3 px-2 px-lg-3 '>
                     <div className='form-label mb-3'>
                       <input
                         type='text'
@@ -53,7 +53,6 @@ function RegisterForm() {
                         placeholder='Name Surname'
                         onChange={handleChange}
                       />
-
                       {errors.name && touched.name && <div className='text-danger'>{errors.name}</div>}
                     </div>
 
@@ -66,6 +65,7 @@ function RegisterForm() {
                         value={values.userName}
                         onChange={handleChange}
                       />
+                      {errors.userName && touched.userName && <div className='text-danger'>{errors.userName}</div>}
                     </div>
                     <div className='form-label mb-3'>
                       <input
@@ -76,6 +76,9 @@ function RegisterForm() {
                         value={values.phoneNumber}
                         onChange={handleChange}
                       />
+                      {errors.phoneNumber && touched.phoneNumber && (
+                        <div className='text-danger'>{errors.phoneNumber}</div>
+                      )}
                     </div>
                     <div className='form-label mb-3'>
                       <input
@@ -86,6 +89,7 @@ function RegisterForm() {
                         placeholder='Email'
                         onChange={handleChange}
                       />
+                      {errors.email && touched.email && <div className='text-danger'>{errors.email}</div>}
                     </div>
                     <div className='form-label mb-3'>
                       <input
@@ -96,6 +100,9 @@ function RegisterForm() {
                         value={values.dateOfBirth}
                         onChange={handleChange}
                       />
+                      {errors.dateOfBirth && touched.dateOfBirth && (
+                        <div className='text-danger'>{errors.dateOfBirth}</div>
+                      )}
                     </div>
                     <div className='form-label mb-3'>
                       <input
@@ -106,26 +113,28 @@ function RegisterForm() {
                         value={values.password}
                         onChange={handleChange}
                       />
+                      {errors.password && touched.password && <div className='text-danger'>{errors.password}</div>}
                     </div>
                     <p className='text-muted text-decoration-underline' href='#'>
                       Password rules
                     </p>
 
-                    <div className='form-check d-flex justify-content-center'>
+                    <div className='form-check d-flex justify-content-start'>
                       <input
-                        className='form-check-input me-2 mb-1'
+                        className='form-check-input me-2 mb-3'
                         type='checkbox'
                         value={values.agree1}
                         name='agree1'
                         onChange={handleChange}
                       />
-                      <label className='form-check-label text-muted ' htmlFor='agree'>
+                      {errors.agree1 && touched.agree1 && <div className='text-danger'>{errors.agree1}</div>}
+                      <label className='form-check-label text-muted mb-2 ' htmlFor='agree'>
                         <span className='text-decoration-underline'> Sözleşmeyi</span> ve
                         <span className='text-decoration-underline'> Gizlilik Şartları </span>’nı okudum ve kabul
                         ediyorum.
                       </label>
                     </div>
-                    <div className='form-check d-flex justify-content-center'>
+                    <div className='form-check d-flex justify-content-start'>
                       <input
                         className='form-check-input me-2 mb-3'
                         type='checkbox'
@@ -133,6 +142,7 @@ function RegisterForm() {
                         name='agree2'
                         onChange={handleChange}
                       />
+                      {errors.agree2 && touched.agree2 && <div className='text-danger'>{errors.agree2}</div>}
                       <label className='form-check-label text-muted mb-3' htmlFor='agree2'>
                         <span className='text-decoration-underline'> Turkcell Genel Veri İşleme İzni </span>'ni kabul
                         ediyorum.
@@ -145,9 +155,9 @@ function RegisterForm() {
                       SUBMIT
                     </button>
                     <div className='text-center text-muted '>
-                      <p className='m-1 '>
+                      <div className='fs-6'>
                         Daha önceden kayıt olduysan hemen <p className='text-decoration-underline'>Oturum aç!</p>
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </form>
