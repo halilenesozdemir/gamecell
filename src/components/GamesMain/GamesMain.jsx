@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import polygon from '../../assets/polygon.svg';
+// import SortComponent from '../SortComponent/SortComponent';
 import './GamesMain.scss';
 
 function GamesMain() {
@@ -25,19 +26,20 @@ function GamesMain() {
 
   return (
     <>
+      {/* <SortComponent /> */}
       {chars.map((char, index) => (
-        <div className='polygon-container'>
-          <div key={index} className='polygon'>
-            <img className='img-fluid' src={polygon} alt='' />
+        <div className='polygon-container polygon-bg'>
+          <div key={index} className='polygon mb-4 '>
+            <img className='img-fluid ' src={polygon} alt='' />
             <span className='char'>{char}</span>
           </div>
-          <div className='row'>
+          <div className='row row-cols-2 mb-2'>
             {filteredGames &&
               filteredGames.map((game, index) => {
                 if (game.title[0] === char) {
                   return (
                     <div key={index}>
-                      <div>{game.title}</div>
+                      <div className='game-color'>{game.title}</div>
                     </div>
                   );
                 }

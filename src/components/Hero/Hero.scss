@@ -1,13 +1,17 @@
 .carousel {
   &-indicators {
     position: absolute;
-    bottom: 10%;
-    right: 60%;
-    z-index: 10;
+    bottom: 25%;
+    right: 62%;
+
+    .active {
+      background-color: green !important;
+    }
 
     button {
-      border-radius: 50%;
+      border-radius: 50% !important;
       height: 10px !important;
+      width: 10px !important;
     }
   }
 
@@ -34,8 +38,14 @@
 
 @media only screen and (max-width: 576px) {
   .carousel {
+    &-indicators {
+      position: absolute;
+      bottom: 23%;
+      right: 55%;
+    }
+
     &-img {
-      height: 35vh;
+      height: 30vh;
       object-fit: cover;
     }
     &-contents {
@@ -45,9 +55,44 @@
         left: 0;
       }
     }
+    .h3 {
+      font-size: 25px;
+    }
+    .h6 {
+      font-size: 18px;
+      font-weight: normal;
+    }
   }
 }
 
-.carousel-indicators .active {
-  color: green !important;
+@media only screen and (max-width: 991px) {
+  .carousel {
+    &-indicators {
+      position: absolute;
+      bottom: 23%;
+      right: 55%;
+    }
+  }
+  .h3 {
+    font-size: 20px;
+  }
+  .h6 {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 792px) {
+  .carousel {
+    &-indicators {
+      position: absolute;
+      bottom: 20%;
+      right: 48%;
+    }
+  }
+  .h3 {
+    font-size: 20px;
+  }
+  .h6 {
+    font-size: 14px;
+  }
 }

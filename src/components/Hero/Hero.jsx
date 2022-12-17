@@ -4,13 +4,23 @@ import heroSrc from '../../assets/hero.png';
 import heroMobile from '../../assets/hero-mobile.png';
 import Features from '../Features/Features';
 import Screens from '../Screens/Screens';
-import { BsFillCircleFill } from 'react-icons/bs';
 
 function Hero({ datas }) {
   return (
     <>
-      <div id='mainCarousel' className='carousel slide position-relative ' data-bs-ride='true'>
+      <div id='mainCarousel' className='carousel slide  ' data-bs-ride='true'>
         <div>
+          <div class='carousel-indicators'>
+            <button
+              type='button'
+              data-bs-target='#mainCarousel'
+              data-bs-slide-to='0'
+              class='active'
+              aria-current='true'
+              aria-label='Slide 1'></button>
+            <button type='button' data-bs-target='#mainCarousel' data-bs-slide-to='1' aria-label='Slide 2'></button>
+            <button type='button' data-bs-target='#mainCarousel' data-bs-slide-to='2' aria-label='Slide 3'></button>
+          </div>
           <div className='carousel-inner'>
             {datas.map((data) => {
               return <Card data={data} />;
@@ -43,9 +53,9 @@ function Hero({ datas }) {
             <span className='visually-hidden'>Next</span>
           </button>
         </div>
-        <Features />
-        <Screens />
       </div>
+      <Features />
+      <Screens />
     </>
   );
 }
@@ -61,9 +71,9 @@ function Card({ data }) {
           <img src={heroSrc} alt='' className='img-fluid w-100' />
         </picture>
         <div className='carousel-contents'>
-          <div className='carousel-content col-lg-5 col-md-6 d-flex flex-column gap-2  px-3 '>
-            <h2 className='h2 '>{data.title}</h2>
-            <p className='h6 '>{data.content}</p>
+          <div className='carousel-content col-sm-7 col-md-6 col-lg-5 d-flex flex-column justify-content-lg-start gap-2  px-3 py-4'>
+            <h3 className='h3'>{data.title}</h3>
+            <p className='h6 fw-lighter lh-sm'>{data.content}</p>
             {data.button}
           </div>
         </div>

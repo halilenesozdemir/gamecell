@@ -26,76 +26,90 @@ const FilterListItem = () => {
 
   return (
     <Fragment>
-      <div className=''>
-        <div class='accordion ' id='accordionExample'>
-          <div class='accordion-item'>
-            <h2 class='accordion-header' id='headingOne'>
-              <button
-                class='accordion-button'
-                type='button'
-                data-bs-toggle='collapse'
-                data-bs-target='#collapseOne'
-                aria-expanded='true'
-                aria-controls='collapseOne'>
-                State
-              </button>
-            </h2>
-            <div
-              id='collapseOne'
-              class='accordion-collapse collapse show'
-              aria-labelledby='headingOne'
-              data-bs-parent='#accordionExample'>
-              <div class='accordion-body'>
-                <div className='d-flex flex-column '>
-                  <div className='d-flex '>
-                    <input type='checkbox' />
-                    <label htmlFor>Available</label>
-                  </div>
-                  <div>
-                    <input type='checkbox' />
-                    <label htmlFor>Patching</label>
-                  </div>
-                  <div>
-                    <input type='checkbox' />
-                    <label htmlFor>Maintenance</label>
-                  </div>
+      <div class=' accordion-bg ' id='accordionExample'>
+        <div class='accordion-item'>
+          <h2 class='accordion-header' id='headingOne'>
+            <button
+              class='accordion-button'
+              type='button'
+              data-bs-toggle='collapse'
+              data-bs-target='#collapseOne'
+              aria-expanded='true'
+              aria-controls='collapseOne'>
+              <div className='d-flex align-items-center justify-content-between w-100'>
+                <p className='genres-text-color h4 '>State</p>
+                <img
+                  src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/3792185E-A728-4D2F-A89C-0E3D1A67E53F.svg'
+                  className='bg-secondary text-black d-inline-block '
+                  alt=''
+                />
+              </div>
+            </button>
+          </h2>
+          <div
+            id='collapseOne'
+            class='accordion-collapse collapse show'
+            aria-labelledby='headingOne'
+            data-bs-parent='#accordionExample'>
+            <div class='accordion-body'>
+              <div className='d-flex flex-column '>
+                <div className='d-flex '>
+                  <input type='checkbox' />
+                  <label htmlFor className='genres-text-color '>
+                    Available
+                  </label>
+                </div>
+                <div>
+                  <input type='checkbox' />
+                  <label htmlFor className='genres-text-color '>
+                    Patching
+                  </label>
+                </div>
+                <div>
+                  <input type='checkbox' />
+                  <label htmlFor className='genres-text-color '>
+                    Maintenance
+                  </label>
                 </div>
               </div>
             </div>
           </div>
-          <div class='accordion-item'>
-            <h2 class='accordion-header' id='headingOne'>
-              <button
-                class='accordion-button'
-                type='button'
-                data-bs-toggle='collapse'
-                data-bs-target='#collapseOne'
-                aria-expanded='true'
-                aria-controls='collapseOne'>
-                Genre Filters
-              </button>
-            </h2>
-            <div
-              id='collapseOne'
-              class='accordion-collapse collapse show'
-              aria-labelledby='headingOne'
-              data-bs-parent='#accordionExample'>
-              <div class='accordion-body'>
-                {sortedGenres.map((game, i) => {
-                  return (
-                    <div className='filter-list' key={i}>
-                      <input
-                        type='checkbox'
-                        name={game}
-                        id={game}
-                        value={game}
-                        onChange={(e) => handleFilterGenre(e)}
-                      />
-                      <label htmlFor={game}>{game}</label>
-                    </div>
-                  );
-                })}
+        </div>
+        <div class='accordion-item'>
+          <h2 class='accordion-header' id='headingTwo'>
+            <button
+              class='accordion-button'
+              type='button'
+              data-bs-toggle='collapse'
+              data-bs-target='#collapseTwo'
+              aria-expanded='true'
+              aria-controls='collapseTwo'>
+              <div className='d-flex align-items-center justify-content-between  w-100'>
+                <span className='genres-text-color h4'>Genre Filters</span>
+                <img
+                  src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/3792185E-A728-4D2F-A89C-0E3D1A67E53F.svg'
+                  className='bg-secondary text-black d-inline-block '
+                  alt=''
+                />
               </div>
+            </button>
+          </h2>
+          <div
+            id='collapseTwo'
+            class='accordion-collapse collapse show'
+            aria-labelledby='headingTwo'
+            data-bs-parent='#accordionExample'>
+            <div class='accordion-body'>
+              {sortedGenres.map((game, i) => {
+                return (
+                  <div className='filter-list' key={i}>
+                    <input type='checkbox' name={game} id={game} value={game} onChange={(e) => handleFilterGenre(e)} />
+                    <label className='genres-text-color' htmlFor={game}>
+                      {game}
+                    </label>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
