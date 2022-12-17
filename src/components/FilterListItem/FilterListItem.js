@@ -60,7 +60,7 @@ const FilterListItem = () => {
                   </label>
                 </div>
                 <div>
-                  <input type='checkbox' />
+                  <input type='checkbox' className='check_box' />
                   <label htmlFor className='genres-text-color '>
                     Patching
                   </label>
@@ -103,7 +103,7 @@ const FilterListItem = () => {
               {sortedGenres.map((game, i) => {
                 return (
                   <div className='filter-list' key={i}>
-                    <input type='checkbox' name={game} id={game} value={game} onChange={(e) => handleFilterGenre(e)} />
+                    <input type='checkbox' name={game} id={game} value={game} onChange={handleFilterGenre} />
                     <label className='genres-text-color' htmlFor={game}>
                       {game}
                     </label>

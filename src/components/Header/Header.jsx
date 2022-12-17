@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 
 function Header() {
   let location = useLocation();
-  console.log(location.pathname);
+
   return (
     <>
       <nav className='navbar navbar-expand-md bg-white py-3  '>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import polygon from '../../assets/polygon.svg';
-// import SortComponent from '../SortComponent/SortComponent';
+
 import './GamesMain.scss';
 
-function GamesMain() {
+function GamesMain({ reversed }) {
   const title = useSelector((state) => state.filters.title);
   const genreFilter = useSelector((state) => state.filters.genre);
 
@@ -22,12 +22,11 @@ function GamesMain() {
     firstLetters.push(game.title[0]);
   });
   let chars = [...new Set(firstLetters.sort())];
-  console.log(chars);
 
   return (
     <>
       {/* <SortComponent /> */}
-      {chars.map((char, index) => (
+      {(reversed ? chars.reverse() : chars).map((char, index) => (
         <div className='polygon-container polygon-bg'>
           <div key={index} className='polygon mb-4 '>
             <img className='img-fluid ' src={polygon} alt='' />

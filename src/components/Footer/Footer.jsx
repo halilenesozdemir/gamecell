@@ -33,7 +33,7 @@ function Footer() {
                 <a href='#' className='fw-bold'>
                   Follow Us!
                 </a>
-                <div className='d-flex mx-auto gap-2'>
+                <div className='d-flex mx-auto gap-2 '>
                   <a href='#'>
                     <img src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/9B563812-1778-49C2-A78A-29E6DAE45954.svg'></img>
                   </a>
