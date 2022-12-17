@@ -2,7 +2,7 @@ const IS_SORT = 'IS_SORT';
 
 export const isSort = (isSort = false) => ({
   type: IS_SORT,
-  payload: isSort,
+  payload: isSort
 });
 
 const isSortReducer = (isSort = false, action) => {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { getFilteredTitles } from '../../reduxStore/selectors/games';
 import polygon from '../../assets/polygon.svg';
 import './GamesMain.scss';
 
@@ -26,7 +25,6 @@ function GamesMain() {
 
   return (
     <>
-      <h1 className='text-center'>Games</h1>
       {chars.map((char, index) => (
         <div className='polygon-container'>
           <div key={index} className='polygon'>
@@ -47,15 +45,6 @@ function GamesMain() {
           </div>
         </div>
       ))}
-
-      {/*       {games &&
-        games.map((game, index) => {
-          return (
-            <div key={index} className='container bg-success'>
-              <div>{game.title}</div>
-            </div>
-          );
-        })} */}
     </>
   );
 }

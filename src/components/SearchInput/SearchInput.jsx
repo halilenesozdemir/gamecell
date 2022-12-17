@@ -1,11 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setTextFilter } from '../../reduxStore/filter';
-import { getSearchBoxInput } from '../../reduxStore/selectors/filters';
+
 import './SearchInput.scss';
 
 function SearchInput() {
-  const inputValue = useSelector(getSearchBoxInput);
+  const inputValue = useSelector((state) => state.filters.title);
   const dispatch = useDispatch();
 
   const searchGame = (e) => {

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import FilterList from '../components/FilterList/FilterList';
 import GamesHero from '../components/GamesHero/GamesHero';
 import GamesMain from '../components/GamesMain/GamesMain';
@@ -17,8 +17,9 @@ function Games() {
     <>
       <Header />
       <GamesHero />
-      <div className='row'>
+      <div className='row bg-black'>
         <div className='col-4'>
+          <p className='h3 text-white'>Browse Games</p>
           <FilterList />
         </div>
         <div className='col-8'>
