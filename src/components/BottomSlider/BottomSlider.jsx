@@ -4,8 +4,8 @@ import './BottomSlider.scss';
 function BottomSlider({ bottomData }) {
   return (
     <>
-      <div id='carouselExampleIndicators' className='carousel slide ' data-bs-ride='true'>
-        <div class='carousel-indicators'>
+      <div id='carouselExampleIndicators' className='carousel slide bg-bottom ' data-bs-ride='true'>
+        <div class='carousel-indicators-2 d-block d-sm-none d-flex gap-2 '>
           <button
             type='button'
             data-bs-target='#carouselExampleIndicators'
@@ -30,7 +30,7 @@ function BottomSlider({ bottomData }) {
           })}
         </div>
         <button
-          className='carousel-control-prev'
+          className='carousel-control-prev d-none d-lg-block'
           type='button'
           data-bs-target='#carouselExampleIndicators'
           data-bs-slide='prev'>
@@ -43,7 +43,7 @@ function BottomSlider({ bottomData }) {
           <span className='visually-hidden'>Previous</span>
         </button>
         <button
-          className='carousel-control-next'
+          className='carousel-control-next d-none d-lg-block'
           type='button'
           data-bs-target='#carouselExampleIndicators'
           data-bs-slide='next'>
@@ -63,17 +63,16 @@ function BottomSlider({ bottomData }) {
 function BottomSliderData({ data }) {
   return (
     <div className={`carousel-item ${data.status} `}>
-      <div className='container'>
-        <div className='row d-flex flex-column flex-sm-row '>
-          <div className='col col-sm-4 '>
-            <img src={data.src} className='img-fluid ' alt='' />
+      <div className='container  py-4 py-lg-5 px-lg-5'>
+        <div className='row d-flex flex-column flex-md-row '>
+          <div className='col col-md-4 d-flex justify-content-center align-items-center mb-3 mb-md-0  '>
+            <img src={data.src} className='img-fluid w-100 ' alt='' />
           </div>
-          <div className='col mx-auto col-sm-8 d-flex flex-column justify-content-center align-items-start px-5 '>
-            <div className='carousel-content d-flex flex-column text-center mb-3'>
-              {data.date}
-              <p className=''>{data.title}</p>
-              <p className=''>{data.desc}</p>
-
+          <div className='col col-md-8 d-flex flex-column justify-content-center align-items-start px-4  '>
+            <div className='carousel-content d-flex flex-column mb-3 text-white'>
+              <p className='fs-6'>{data.date}</p>
+              <p className='fs-5'>{data.title}</p>
+              <p className='fs-5'>{data.desc}</p>
               {data.button}
             </div>
           </div>

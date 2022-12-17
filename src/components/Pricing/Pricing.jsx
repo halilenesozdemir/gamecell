@@ -4,8 +4,8 @@ import './Pricing.scss';
 function Pricing({ pricingMock }) {
   return (
     <>
-      <div className='container-fluid py-3'>
-        <div class='row row-cols-1 row-cols-md-3 mb-3 text-center px-sm-5'>
+      <div className='container-fluid py-3 bg-black'>
+        <div class='row row-cols-1 row-cols-md-3 mb-3 text-center '>
           {pricingMock.map((data) => {
             return <PricingCard data={data} />;
           })}
@@ -18,32 +18,36 @@ function Pricing({ pricingMock }) {
 function PricingCard({ data }) {
   return (
     <div>
-      <div class='col '>
-        <div class='card mb-4 shadow-sm'>
-          <div class='card-header py-3'>
-            <h4 class='my-0 fw-normal'></h4>
+      <div className={`col ${data.className}`}>
+        <div class=' mb-4 shadow-sm py-2   '>
+          <div className='pricing-header  '>
+            <h2 class={`py-3 text-white fw-light fs-2 m-0 ${data.title === 'STANDARD' ? 'bg-success' : ''}`}>
+              {data.title}
+            </h2>
           </div>
-          <div class='card-body py-5 '>
-            <h2 class='card-title pricing-card-title bg-black'>{data.title}</h2>
-            <hr />
-            <div className=''>
-              <div className='mb-2 d-flex flex-col align-items-center justify-content-center gap-3'>
+          <div className='pricing-body py-lg-5 '>
+            <h3 className='text-white fw-light py-2   d-flex justify-content-center align-items-center'>
+              {data.status}
+            </h3>
+            <hr className='text-white hr mx-auto' />
+            <div className='d-flex flex-column align-items-start align-items-sm-center px-4 pb-5 gap-2 py-lg-2    '>
+              <div className='mb-2 d-flex gap-2 '>
                 <img src={data.src} alt='' />
-                <p>{data.opt1}</p>
+                <p className='text-white  m-0  pricing-features'>{data.opt1}</p>
               </div>
-              <div className='mb-2 d-flex flex-col align-items-center justify-content-center gap-3 '>
+              <div className='mb-2 d-flex gap-2  '>
                 <img src={data.src} alt='' />
-                <p>{data.opt2}</p>
+                <p className='text-white  m-0  pricing-features'>{data.opt2}</p>
               </div>
-              <div className='mb-2 d-flex flex-col align-items-center justify-content-center gap-3'>
+              <div className='mb-2 d-flex gap-3'>
                 <img src={data.src} alt='' />
-                <p>{data.opt1}</p>
+                <p className='text-white m-0  pricing-features'>{data.opt1}</p>
               </div>
-              <div className='mb-2 d-flex flex-col align-items-center justify-content-center gap-3'>
+              <div className='mb-2 d-flex gap-3 '>
                 <img src={data.src} alt='' />
-                <p>{data.opt2}</p>
+                <p className='text-white m-0  pricing-features'>{data.opt2}</p>
               </div>
-              {data.button}
+              <p className='m-0 d-block mx-auto'>{data.button}</p>
             </div>
           </div>
         </div>

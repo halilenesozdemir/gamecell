@@ -4,33 +4,35 @@ import './Footer.scss';
 function Footer() {
   return (
     <>
-      <footer className='bg-white'>
-        <div className='row text-center'>
-          <div className='col-8 d-flex justify-content align-items-center px-5'>
-            <div className='col-3 text-decoration-none'>
-              <ul className='list-unstyled  d-flex flex-column'>
+      <footer className='bg-white py-2 py-lg-3'>
+        <div className='row d-flex flex-column align-items-center  flex-sm-row text-center m-0 '>
+          <div className='col-8 d-flex flex-column  flex-sm-row   justify-content-center align-items-center p-0  '>
+            <div className='col-3 '>
+              <ul className='list-unstyled  d-flex flex-column m-0'>
                 <a href='#'>Games </a>
                 <a href='#'>Membership</a>
                 <a href='#'>Download</a>
               </ul>
             </div>
             <div className='col-2'>
-              <ul className='list-unstyled text-decoration-none d-flex flex-column'>
+              <ul className='list-unstyled  d-flex flex-column  m-0 '>
                 <a href='#'>Contact Us</a>
                 <a href='#'>Blog</a>
               </ul>
             </div>
             <div className='col-2'>
-              <ul className='list-unstyled text-decoration-none d-flex flex-column'>
+              <ul className='list-unstyled  d-flex flex-column mb-2'>
                 <a href='#'>FAQs</a>
                 <a href='#'>Service Status</a>
               </ul>
             </div>
           </div>
-          <div className='col-4 d-flex justify-content align-items-center'>
+          <div className='col-4 flex-column d-flex  flex-sm-row  justify-content-center align-items-center'>
             <div className='col'>
-              <ul className='list-unstyled text-decoration-none d-flex flex-column'>
-                <a href='#'>Follow Us!</a>
+              <ul className='list-unstyled  d-flex flex-column'>
+                <a href='#' className='fw-bold'>
+                  Follow Us!
+                </a>
                 <div className='d-flex mx-auto gap-2'>
                   <a href='#'>
                     <img src='https://cdn.zeplin.io/5f91645bc7d3b352a5fe0ebd/assets/9B563812-1778-49C2-A78A-29E6DAE45954.svg'></img>
@@ -47,13 +49,13 @@ function Footer() {
                 </div>
               </ul>
             </div>
-            <div className='col'>
-              <p>Site Language</p>
-              <div class='dropdown'>
+            <div className='col '>
+              <p className='m-0'>Site Language</p>
+              <div class='dropdown '>
                 <a class='btn dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
                   English
                 </a>
-                <ul class='dropdown-menu'>
+                <ul class='dropdown-menu '>
                   <a class='dropdown-item' href='#'>
                     English
                   </a>
@@ -66,15 +68,16 @@ function Footer() {
           </div>
         </div>
       </footer>
-      <div className='container-fluid d-flex'>
-        <div className='row container-md'>
-          <div className='col-10 d-flex gap-5'>
-            <p>Terms of Use</p>
-            <p>Privacy Policy</p>
-            <p>Cookies</p>
+      {/* FOOTER 2 */}
+      <div className='container-fluid bg-black px-lg-5 py-3 '>
+        <div className='row d-flex flex-column flex-sm-row justify-content-center align-items-center text-center  '>
+          <div className='col d-flex flex-column flex-sm-row gap-lg-3 mb-2 align-items-center    '>
+            <p className='text-white m-0'>Terms of Use</p>
+            <p className='text-white m-0'>Privacy Policy</p>
+            <p className='text-white m-0'>Cookies</p>
           </div>
-          <div className='col-2'>
-            <p>Tüm Hakları Saklıdır.</p>
+          <div className='col  d-flex flex-column flex-sm-row justify-content-end align-items-star'>
+            <p className='text-white text-muted m-0'>Tüm Hakları Saklıdır.</p>
           </div>
         </div>
       </div>
