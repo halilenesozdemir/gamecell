@@ -2,10 +2,12 @@ import React, { Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './FilterListItem.scss';
 
-import { removeCheckboxFilter, setCheckboxFilter } from '../../reduxStore/filter';
+import { removeCheckboxFilter, setCheckboxFilter, setCheckboxList, removeCheckboxList } from '../../reduxStore/filter';
 
 const FilterListItem = () => {
   const { games } = useSelector((state) => state.gameReducer);
+  const checkedList = useSelector((state) => state.filters.checked);
+  console.log(checkedList);
   const allGenres = games.map((game) => game.genres);
   const correctGenres = [...new Set(allGenres.flat(1))];
   const filteredGenres = correctGenres.filter((game) => game != null);
@@ -19,8 +21,10 @@ const FilterListItem = () => {
 
     if (e.target.checked) {
       dispatch(setCheckboxFilter(value));
+      dispatch(setCheckboxList(value));
     } else {
       dispatch(removeCheckboxFilter(value));
+      dispatch(removeCheckboxList(value));
     }
   };
 
@@ -103,7 +107,14 @@ const FilterListItem = () => {
               {sortedGenres.map((game, i) => {
                 return (
                   <div className='filter-list' key={i}>
-                    <input type='checkbox' name={game} id={game} value={game} onChange={handleFilterGenre} />
+                    <input
+                      type='checkbox'
+                      name={game}
+                      id={game}
+                      value={game}
+                      onChange={handleFilterGenre}
+                      checked={checkedList.find((x) => x == game)}
+                    />
                     <label className='genres-text-color' htmlFor={game}>
                       {game}
                     </label>

@@ -6,7 +6,7 @@ function Footer() {
     <>
       <footer className='bg-white py-2 py-lg-3'>
         <div className='row d-flex flex-column align-items-center  flex-sm-row text-center m-0 '>
-          <div className='col-8 d-flex flex-column  flex-sm-row   justify-content-center align-items-center p-0  '>
+          <div className='col-5 d-flex flex-column  flex-sm-row   justify-content-start align-items-center p-0 offset-md-1'>
             <div className='col-3 '>
               <ul className='list-unstyled  d-flex flex-column m-0'>
                 <a href='#'>Games </a>
@@ -14,20 +14,20 @@ function Footer() {
                 <a href='#'>Download</a>
               </ul>
             </div>
-            <div className='col-2'>
+            <div className='col-3'>
               <ul className='list-unstyled  d-flex flex-column  m-0 '>
                 <a href='#'>Contact Us</a>
                 <a href='#'>Blog</a>
               </ul>
             </div>
-            <div className='col-2'>
+            <div className='col-3'>
               <ul className='list-unstyled  d-flex flex-column mb-2'>
                 <a href='#'>FAQs</a>
                 <a href='#'>Service Status</a>
               </ul>
             </div>
           </div>
-          <div className='col-4 flex-column d-flex  flex-sm-row  justify-content-center align-items-center'>
+          <div className='col-4 flex-column d-flex  flex-sm-row  justify-content-center align-items-center offset-md-2'>
             <div className='col'>
               <ul className='list-unstyled  d-flex flex-column'>
                 <a href='#' className='fw-bold'>

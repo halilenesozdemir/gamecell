@@ -13,9 +13,13 @@ const SortDropdown = ({ setReversed }) => {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '20px' }}>
-      <div class='dropdown'>
-        <button class='btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
+    <div className=' pe-lg-2  w-100 '>
+      <div class='dropdown  w-100'>
+        <button
+          class='btn btn-secondary dropdown-toggle  w-100'
+          type='button'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'>
           {selected}
         </button>
         <ul class='dropdown-menu'>

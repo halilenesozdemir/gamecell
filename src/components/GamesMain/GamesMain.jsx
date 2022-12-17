@@ -28,11 +28,11 @@ function GamesMain({ reversed }) {
       {/* <SortComponent /> */}
       {(reversed ? chars.reverse() : chars).map((char, index) => (
         <div className='polygon-container polygon-bg'>
-          <div key={index} className='polygon mb-4 '>
+          <div key={index} className='polygon mb-4  '>
             <img className='img-fluid ' src={polygon} alt='' />
             <span className='char'>{char}</span>
           </div>
-          <div className='row row-cols-2 mb-2'>
+          <div className='row row-cols-1 row-cols-lg-2 mb-2 py-2 px-3'>
             {filteredGames &&
               filteredGames.map((game, index) => {
                 if (game.title[0] === char) {

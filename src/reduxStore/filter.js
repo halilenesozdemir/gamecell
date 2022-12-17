@@ -10,11 +10,20 @@ export const removeCheckboxFilter = (genre) => ({
   type: 'REMOVE_CHECKBOX_FILTER',
   genre
 });
+export const setCheckboxList = (checked) => ({
+  type: 'SET_CHECKBOX_LIST',
+  checked
+});
+export const removeCheckboxList = (checked) => ({
+  type: 'REMOVE_CHECKBOX_LIST',
+  checked
+});
 export const clearFilters = () => ({
   type: 'CLEAR_FILTERS'
 });
 
 const filtersReducerDefaultState = {
+  checked: [],
   genre: [],
   title: ''
 };
@@ -35,6 +44,16 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
       return {
         ...state,
         genre: state.genre.filter((genre) => genre !== action.genre)
+      };
+    case 'SET_CHECKBOX_LIST':
+      return {
+        ...state,
+        checked: [...state.checked, action.checked]
+      };
+    case 'REMOVE_CHECKBOX_LIST':
+      return {
+        ...state,
+        checked: state.checked.filter((check) => check != action.checked)
       };
     case 'CLEAR_FILTERS':
       return {
